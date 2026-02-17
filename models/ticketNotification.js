@@ -19,10 +19,11 @@ const ticketNotificationSchema = new mongoose.Schema({
             values: ["SUCCESS", "FAILED", "PENDING"],
             message: "Invalid ticket status"
         },
+        default: "PENDING",
         required: true
     }
 }, {timestamps: true});
 
 const ticketNotificationModel = mongoose.model('TicketNotification', ticketNotificationSchema);
 
-module.exports = ticketNotificationModels;
+module.exports = ticketNotificationModel;
